@@ -1,0 +1,29 @@
+<div style="width: 100% ;padding: 20px" id="pdf">
+
+
+  <h2 style="border: 1px solid black; text-align:  center; margin: 10px; padding: 10px">MODELE OFFRE TECHNIQUE POUR POMPE</h2>
+  <table border="1"  style="border: 1px solid black;margin: auto; padding: 10px" width="80%" height="100%">
+    <tbody>
+    <tr><td>Région : </td><td>{{data.region}}</td></tr>
+    <tr><td>Usine :</td><td>{{data.usine}}</td></tr>
+    <tr><td>Répére :</td><td>{{data.referenceRepere}}</td></tr>
+    <tr><td>Service: </td><td>{{data.service}}</td></tr>
+    <tr><td>Fonction de l'equipement: </td><td>{{data.fonctionEquipement}}</td></tr>
+    <tr><td>Puissance moteur à récupérer: </td><td>{{data.puissanceMoteur}}</td></tr>
+    <tr><td>Vitesse moteur à récupérer: </td><td>{{data.vitesse}}</td></tr>
+    <tr><td>Liaison moteur à récupérer: </td><td>{{data.liaisonMoteur}}</td></tr>
+    <tr><td>Peinture:</td><td>{{data.peinture}}</td></tr>
+    <tr><td>Masse Volumique:</td><td>{{data.masseVol}}</td></tr>
+    <tr><td>NPSH disponible: </td><td>{{data.npshDisponible}}</td></tr>
+    <tr><td>Liquide véhicule: </td><td>{{data.liquideVehicule}}</td></tr>
+    <tr><td>Témpérature de pompage: </td><td>{{data.temperaturePompage}}</td></tr>
+    <tr><td>Vitesse nominale: </td><td>{{data.vitesseNominale}}</td></tr>
+    <tr><td>Débit nominale: </td><td>{{data.debitNominal}}</td></tr>
+    <tr><td>Hauteur manométrique total: </td><td>{{data.hauteManometrique}}</td></tr>
+    <tr><td>Disposition: </td><td>{{data.disposition}}</td></tr>
+    </tbody>
+  </table>
+
+</div>
+<button class="btn btn-primary float-left" (click)="pdf()"> Telecharger</button>
+<button class="btn btn-danger float-right" (click)="onNoClick()"> Fermer</button>

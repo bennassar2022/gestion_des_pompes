@@ -1,0 +1,65 @@
+<br><br>
+
+
+
+<div *ngIf="role === 'admin' "  style="margin-left: 5px">
+  <a routerLink="/home/pompe-add" class="btn btn-success"><span style="" class="material-icons">
+note_add
+</span>&nbsp;Ajouter une nouvelle pompe</a>
+</div>
+<br><br>
+<mat-form-field style="margin-left: 10px; width: 20%">
+  <mat-label>Rechercher des pompes</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="taper une valeur">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="region">
+      <th mat-header-cell *matHeaderCellDef> region </th>
+      <td mat-cell *matCellDef="let element"> {{element.region}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="usine">
+      <th mat-header-cell *matHeaderCellDef> usine </th>
+      <td mat-cell *matCellDef="let element"> {{element.usine}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="puissanceMoteur">
+      <th mat-header-cell *matHeaderCellDef>  puissanceMoteur </th>
+      <td mat-cell *matCellDef="let element"> {{element.puissanceMoteur}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="peinture">
+      <th mat-header-cell *matHeaderCellDef> peinture </th>
+      <td mat-cell *matCellDef="let element"> {{element.peinture}} </td>
+    </ng-container>
+
+    <ng-container  matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef> Supprimer </th>
+      <td mat-cell *matCellDef="let element" > <button [disabled]="role !== 'admin'" class="btn btn-danger" (click)="delete(element)"><span class="material-icons">
+delete_forever
+</span></button> </td>
+    </ng-container>
+    <ng-container matColumnDef="fiche">
+      <th mat-header-cell *matHeaderCellDef> FICHE </th>
+      <td mat-cell *matCellDef="let element"> <button (click)="openDialogFiche(element)"><span class="material-icons">
+preview
+</span></button> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="contrat">
+      <th mat-header-cell *matHeaderCellDef> DATASHEET </th>
+      <td mat-cell *matCellDef="let element"> <a target="_blank" href="../../../../assets/datasheet.pdf"><span class="material-icons">
+preview
+</span></a> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+

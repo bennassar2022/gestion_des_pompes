@@ -1,0 +1,63 @@
+<br><br>
+
+
+<br><br>
+<mat-form-field style="margin-left: 10px; width: 20%">
+  <mat-label>Rechercher des utilisateurs</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="taper une valeur">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="fullname">
+      <th mat-header-cell *matHeaderCellDef> Nom </th>
+      <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
+    </ng-container>
+
+
+
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="isactivated">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element" > <span *ngIf="element.isactivated" class="material-icons">
+assignment_turned_in
+</span> <span *ngIf="!element.isactivated" span class="material-icons">
+assignment_late
+</span></td>
+    </ng-container>
+    <ng-container matColumnDef="Activer">
+      <th mat-header-cell *matHeaderCellDef> Activer </th>
+      <td mat-cell *matCellDef="let element" > <button class="btn btn-info" (click)="activate(element)"><span class="material-icons">
+cached
+</span></button> </td>
+    </ng-container>
+    <ng-container matColumnDef="Desactiver">
+      <th mat-header-cell *matHeaderCellDef> Desactiver </th>
+      <td mat-cell *matCellDef="let element" > <button class="btn btn-danger" (click)="desactivate(element)"><span class="material-icons">
+cached
+</span></button> </td>
+    </ng-container>
+    <ng-container matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef> Supprimer </th>
+      <td mat-cell *matCellDef="let element" > <button class="btn btn-danger" (click)="delete(element)"><span class="material-icons">
+delete
+</span></button> </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+

@@ -1,0 +1,176 @@
+<div class="col-md-6">
+  <h2 class="text-center">Pompe</h2>
+  <form [formGroup]="addForm" novalidate class="form">
+
+
+    <div class="form-group">
+      <label for="region">region : </label>
+      <input type="text" formControlName="region" placeholder="region" name="region" class="form-control"  id="region">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('region').hasError('required') && addForm.get('region').touched">
+      Veuillez entre votre region
+    </div>
+
+
+
+
+
+    <!-- apartir ici -->
+    <div class="form-group">
+      <label for="usine">usine : </label>
+      <input type="text" formControlName="usine" placeholder="usine" name="usine" class="form-control"  id="usine">
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('usine').hasError('required') && addForm.get('usine').touched">
+      Veuillez entre votre usine
+    </div>
+
+    <div class="form-group">
+      <label for="region">fonctionEquipement : </label>
+      <input type="text" formControlName="fonctionEquipement" placeholder="fonctionEquipement" name="fonctionEquipement" class="form-control"  id="fonctionEquipement">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('fonctionEquipement').hasError('required') && addForm.get('fonctionEquipement').touched">
+      Veuillez entre votre fonctionEquipement
+    </div>
+
+    <div class="form-group">
+      <label for="puissanceMoteur">puissanceMoteur : </label>
+      <input type="text" formControlName="puissanceMoteur" placeholder="puissanceMoteur" name="puissanceMoteur" class="form-control"  id="puissanceMoteur">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('puissanceMoteur').hasError('required') && addForm.get('puissanceMoteur').touched">
+      Veuillez entre votre puissanceMoteur
+    </div>
+
+    <div class="form-group">
+      <label for="vitesse">vitesse : </label>
+      <input type="text" formControlName="vitesse" placeholder="vitesse" name="vitesse" class="form-control"  id="vitesse">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('vitesse').hasError('required') && addForm.get('vitesse').touched">
+      Veuillez entre votre vitesse
+    </div>
+    <div class="form-group">
+      <label for="liaisonMoteur">liaisonMoteur : </label>
+      <input type="text" formControlName="liaisonMoteur" placeholder="liaisonMoteur" name="liaisonMoteur" class="form-control"  id="liaisonMoteur">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('liaisonMoteur').hasError('required') && addForm.get('liaisonMoteur').touched">
+      Veuillez entre votre liaisonMoteur
+    </div>
+    <div class="form-group">
+      <label for="region">masseVol : </label>
+      <input type="text" formControlName="masseVol" placeholder="masseVol" name="masseVol" class="form-control"  id="masseVol">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('masseVol').hasError('required') && addForm.get('masseVol').touched">
+      Veuillez entre votre masseVol
+    </div>
+    <div class="form-group">
+      <label for="region">npshDisponible : </label>
+      <input type="text" formControlName="npshDisponible" placeholder="npshDisponible" name="npshDisponible" class="form-control"  id="npshDisponible">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('npshDisponible').hasError('required') && addForm.get('npshDisponible').touched">
+      Veuillez entre votre npshDisponible
+    </div>
+    <div class="form-group">
+      <label for="liquideVehicule">liquideVehicule : </label>
+      <input type="text" formControlName="liquideVehicule" placeholder="liquideVehicule" name="liquideVehicule" class="form-control"  id="liquideVehicule">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('liquideVehicule').hasError('required') && addForm.get('liquideVehicule').touched">
+      Veuillez entre votre liquideVehicule
+    </div>
+    <div class="form-group">
+      <label for="vitesseNominale">vitesseNominale : </label>
+      <input type="text" formControlName="vitesseNominale" placeholder="vitesseNominale" name="vitesseNominale" class="form-control"  id="vitesseNominale">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('vitesseNominale').hasError('required') && addForm.get('vitesseNominale').touched">
+      Veuillez entre votre vitesseNominale
+    </div>
+    <div class="form-group">
+      <label for="temperaturePompage">temperaturePompage : </label>
+      <input type="text" formControlName="temperaturePompage" placeholder="temperaturePompage" name="temperaturePompage" class="form-control"  id="temperaturePompage">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('temperaturePompage').hasError('required') && addForm.get('temperaturePompage').touched">
+      Veuillez entre votre temperaturePompage
+    </div>
+    <div class="form-group">
+      <label for="debitNominal">debitNominal : </label>
+      <input type="text" formControlName="debitNominal" placeholder="debitNominal" name="debitNominal" class="form-control"  id="debitNominal">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('debitNominal').hasError('required') && addForm.get('debitNominal').touched">
+      Veuillez entre votre debitNominal
+    </div>
+    <div class="form-group">
+      <label for="hauteManometrique">hauteManometrique : </label>
+      <input type="text" formControlName="hauteManometrique" placeholder="hauteManometrique" name="hauteManometrique" class="form-control"  id="hauteManometrique">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('hauteManometrique').hasError('required') && addForm.get('hauteManometrique').touched">
+      Veuillez entre votre hauteManometrique
+    </div>
+    <div class="form-group">
+      <label for="disposition">disposition : </label>
+      <input type="text" formControlName="disposition" placeholder="disposition" name="disposition" class="form-control"  id="disposition">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('disposition').hasError('required') && addForm.get('disposition').touched">
+      Veuillez entre votre disposition
+    </div>
+    <div class="form-group">
+      <label for="repere">repere : </label>
+      <select   formControlName="repere" placeholder="repere" name="repere" class="form-control"  id="repere">
+        <option [value]="repere.id" *ngFor="let repere of reperes">{{repere.reference}}</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" *ngIf="addForm.get('repere').hasError('required') && addForm.get('repere').touched">
+      Veuillez entrer repere
+    </div>
+
+
+    <div class="form-group">
+      <label for="service">service : </label>
+      <input type="text" formControlName="service" placeholder="service" name="service" class="form-control"  id="service">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('service').hasError('required') && addForm.get('service').touched">
+      Veuillez entre votre service
+    </div>
+    <div class="form-group">
+      <label for="peinture">peinture : </label>
+      <input type="text" formControlName="peinture" placeholder="peinture" name="peinture" class="form-control"  id="peinture">
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('peinture').hasError('required') && addForm.get('peinture').touched">
+      Veuillez entre votre peinture
+    </div>
+    <div>
+      <button class="btn btn-success" (click)="onSubmit()">Enregistrer</button>
+
+      <a routerLink="/home/pompe-list" class="btn btn-primary">Liste Pompes</a>
+    </div>
+  </form>
+
+</div>

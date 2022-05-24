@@ -1,0 +1,25 @@
+<br><br><br>
+<div class="col-md-12">
+  <h2 class="text-center">Ajout de Repere</h2>
+  <form [formGroup]="addForm" novalidate class="form">
+
+
+    <div class="form-group">
+      <label for="reference">Reference : </label>
+      <input type="text" formControlName="reference" placeholder="taper une valeur" name="reference" class="form-control"  id="reference" required>
+
+    </div>
+
+    <div class="alert alert-danger" *ngIf="addForm.get('reference').hasError('required') && addForm.get('reference').touched">
+      Veuillez entrer reference
+    </div>
+
+    <div>
+      <button class="btn btn-success" (click)="onSubmit()">Enregistrer</button>
+      &nbsp;&nbsp;
+      <a routerLink="/home/repere-list" class="btn btn-primary">Liste Reperes</a>
+    </div>
+    <br><br>
+  </form>
+
+</div>

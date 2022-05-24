@@ -1,0 +1,41 @@
+<div class="container-fluid" style="background-image: url('../../../assets/images/slider.jpg');
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+  <div class="row align-items-center justify-content-center" style="height: 100vh;">
+    <div class="col-sm-4 align-self-center" style="background: #699ea1; padding: 15px; border-radius: 5px;">
+      <a class="to-home" [routerLink]="['/home']"><h2 class=" " style="text-align: center;color: black;"> create an account</h2></a>
+      <form [formGroup]="formGroup" (ngSubmit)="register()">
+        <div class="form-group">
+          <label for="email">Nom</label>
+          <input formControlName="fullname" type="text" class="form-control" id="name" aria-describedby="namehelp" placeholder="Entrer votre nom">
+          <small id="namehelp" class="form-text text-muted">Example: Joe Hamston</small>
+        </div>
+        <div class="form-group">
+          <label for="matricule">Matricule</label>
+          <input formControlName="matricule" type="number" class="form-control" id="matricule" aria-describedby="matriculehelp" placeholder="Entrer matricule">
+          <small id="matriculehelp" class="form-text text-muted">Example: 04918478</small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">Example: example@domaine.com</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input formControlName="password" type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Password">
+          <small id="passwordHelp" class="form-text text-muted">Enter your password</small>
+        </div>
+        <!-- <div class="form-group form-check">
+          <input formControlName="rememberMe" type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div> -->
+        <a routerLink="/login"  class="col-sm-3 btn btn-primary float-left" >sign in</a>
+
+        <button type="submit" class="col-sm-3 btn btn-primary float-right" >register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

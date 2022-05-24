@@ -1,0 +1,24 @@
+.card-logo {
+    padding: 20%;
+}
+.mat-progress-spinner {
+    display: initial;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mat-progress-spinner::ng-deep circle {
+  stroke: #699ea1;
+}
+.to-home:link {
+  color: #dc3545;
+}
+.to-home:visited {
+  color: #dc3545;
+}
+.to-home:hover {
+  text-decoration: none;
+  color: #dc3545;
+}
+.to-home:active {
+  color: #dc3545;
+}
